@@ -79,10 +79,10 @@ server.post('/api/users', (req, res) => {
 
 // //-*-*-*-* GET REQUEST  -*-*-*-*
 server.get('/api/users/:id', (req, res) => {
-    const { hubsID } = req.params.id;
+    const { id } = req.params.id;
 
     dataB
-        .findById(hubsID)
+        .findById(id)
         .then(user => {
             console.log('user', user);
             if (user) {
